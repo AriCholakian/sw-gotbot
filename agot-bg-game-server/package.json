@@ -80,7 +80,7 @@
     "run-client": "webpack-dev-server --config webpack.client.dev.js --mode=development",
     "build-client": "webpack --config webpack.client.js --mode=production",
     "build-local-client": "webpack --config webpack.client.local.js --mode=production",
-    "run-server": "ts-node -T src/server/server.ts",
+    "run-server": "rm -f ./src/server/website-client/local-entire-game.json && ts-node -T src/server/server.ts",
     "generate-json-schemas": "typescript-json-schema --strict-null-checks src/messages/ClientMessage.ts ClientMessage -o src/server/ClientMessage.json --include src/messages/*.ts",
     "lint": "eslint . --ext .ts,.tsx"
   },
